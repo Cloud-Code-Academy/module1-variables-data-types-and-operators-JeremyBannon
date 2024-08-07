@@ -200,7 +200,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+        Final Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
         Integer milliseconds = minutes * MILLISECONDS_PER_MINUTE;
         return milliseconds; // Replace null with the variable you used to store the result
     }    
@@ -302,8 +302,7 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer performDivisionAndCast(Double a, Double b) {
         // Perform the division and cast (round down) off the result.
-        Double divisionResult = a / b;
-
+        
         // Write the code for type casting the divisionResult to an Integer
         Integer roundedResult = (Integer) (a / b); //Integer roundedResult = math.floor ( a / b) JB ??
         return roundedResult; // Replace null with the variable you used to store the result
