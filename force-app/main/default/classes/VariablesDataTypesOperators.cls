@@ -32,8 +32,15 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) { 
-        Integer sum = a + b; 
-        return sum; // Replace null with the variable you used to store the result
+        //Integer result = a + b;
+        if( a == null || b == null){
+            return null;
+        } 
+        else{
+            Integer result = a + b;
+            return result;
+        }
+        //return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -72,6 +79,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Integer a, Integer b) {
+        if(b == 0){
+            return 0;
+        }
         Integer div = a / b;
         return div; // Replace null with the variable you used to store the result
     }
@@ -138,7 +148,7 @@ public with sharing class VariablesDataTypesOperators {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-        String sentence = 'The' + ' ' + noun + 'is' + ' ' + verb + ' ' + endingPunctuation;
+        String sentence = 'The' + ' ' + noun + ' ' + 'is' + ' ' + verb + endingPunctuation;
 		return sentence; // Replace null with the variable you used to store the result
 	}
 
